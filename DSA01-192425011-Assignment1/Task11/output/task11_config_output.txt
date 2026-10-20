@@ -1,0 +1,12 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task11_config task11_config.cpp
+$ ./task11_config fares.cfg fares_revised.cfg fares_bad.cfg missing.cfg
+== fares.cfg : loaded  [45.5 microseconds]
+   Inner 10.00  Middle 20.00  Outer 30.00  Outer peak 36.00  min balance 50.00
+== fares_revised.cfg : loaded  [10.5 microseconds]
+   Inner 10.00  Middle 20.00  Outer 35.00  Outer peak 42.00  min balance 50.00
+== fares_bad.cfg : REJECTED (negative value for MIDDLE), using built-in defaults  [5.4 microseconds]
+   Inner 10.00  Middle 20.00  Outer 30.00  Outer peak 36.00  min balance 50.00
+== missing.cfg : REJECTED (cannot open file), using built-in defaults  [1.5 microseconds]
+   Inner 10.00  Middle 20.00  Outer 30.00  Outer peak 36.00  min balance 50.00
+Space for the table: 48 bytes
+[exit code 0]

@@ -1,0 +1,39 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task03_types task03_types.cpp
+$ ./task03_types 
+=== sizeof on this system ===
+bool                1 byte
+char                1 byte
+int                 4 bytes
+unsigned int        4 bytes
+long long           8 bytes
+float               4 bytes
+double              8 bytes
+auto (=3000000)     4 bytes (deduced int)
+
+=== Ranges from <climits> ===
+INT_MAX   = 2147483647
+UINT_MAX  = 4294967295
+LLONG_MAX = 9223372036854775807
+
+Network worst case per day = 10800000000 paise
+Fits in int?        NO - int overflows
+Fits in long long?  yes
+
+=== Why money must not be double rupees ===
+0.1 + 0.2        = 0.30000000000000004
+0.1 + 0.2 == 0.3 ? false
+10 * 1.2 * 0.6   = 7.1999999999999993
+Truncated to paise: 719 (expected 720) -> off by one paisa
+llround to paise : 720 (correct, but only if every step rounds)
+Integer paise    : 720 (exact by construction)
+
+=== Rounding error growth: adding n fares of Rs 21.60 ===
+n         double total (Rs)         exact paise total     error (Rs)
+10        216.0000000000            21600                 -2.842e-14
+1000      21599.9999999998          2160000               -1.564e-10
+20000     431999.9999998668         43200000              -1.332e-07
+500000    10799999.9998988397       1080000000            -1.012e-04
+3000000   64800000.0031086951       6480000000            3.109e-03
+
+float total for 3,000,000 x 21.60 = 62883672.00 (exact 64800000.00)
+[exit code 0]

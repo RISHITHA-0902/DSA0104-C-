@@ -1,0 +1,14 @@
+digraph UML {
+  rankdir=TB; node [shape=record, fontname="Times New Roman", fontsize=11]; edge [fontname="Times New Roman", fontsize=10];
+  FareTable [label="{FareTable|+ BASE_PAISE[3] : long long \{constexpr\}\l+ PEAK_SURCHARGE_PERCENT : int\l+ STUDENT_CONCESSION_PERCENT : int\l+ SENIOR_CONCESSION_PERCENT : int\l|+ isPeak(hour, minute) : bool\l+ fare(zone, hour, minute, category) : long long\l- applyPercent(paise, percent) : long long\l}"];
+  SmartCard [label="{SmartCard|+ MIN_BALANCE_PAISE : long long = 5000\l- balance_ : long long\l|+ balance() : long long\l+ canTravel(fare) : bool\l+ deduct(fare) : bool\l+ recharge(paise) : bool\l}"];
+  Passenger [label="{Passenger|- name_ : string\l- category_ : Category\l|+ name() : string\l+ category() : Category\l}"];
+  Journey [label="{Journey|- zone_ : Zone\l- hour_ : int\l- minute_ : int\l|+ fareFor(passenger) : long long\l+ describe() : string\l}"];
+  Zone [label="{«enumeration»\nZone|Inner\lMiddle\lOuter\l}"];
+  Category [label="{«enumeration»\nCategory|General\lStudent\lSenior\l}"];
+  Passenger -> SmartCard [label=" owns 1", arrowhead=none, arrowtail=odiamond, dir=back];
+  Journey -> FareTable [label=" uses", style=dashed, arrowhead=open];
+  Journey -> Passenger [label=" for", style=dashed, arrowhead=open];
+  Journey -> Zone [arrowhead=open];
+  Passenger -> Category [arrowhead=open];
+}

@@ -1,0 +1,17 @@
+digraph UML {
+  rankdir=TB; node [shape=record, fontname="Times New Roman", fontsize=11]; edge [fontname="Times New Roman", fontsize=10];
+  Gate [label="{Gate||+ process(card, journey) : GateResult \{static\}\l}"];
+  FareCalculator [label="{FareCalculator|BASE_PAISE : array\<long long, 4\>\lPEAK_SURCHARGE_PERCENT = 20\lWEEKEND_DISCOUNT_PERCENT = 10\l|+ fare(journey) : long long \{static\}\l}"];
+  SmartCard [label="{SmartCard|- balance_ : long long\l- pass_ : optional\<MonthlyPass\>\l|+ canTravel(fare) : bool\l+ deduct(fare) : bool\l+ recharge(paise) : bool\l+ attachPass(pass)\l}"];
+  MonthlyPass [label="{MonthlyPass|- a_, b_ : Zone\l- month_ : int\l|+ valid() : bool\l+ covers(journey) : bool\l}"];
+  Journey [label="{Journey|from, to : Zone\lhour, minute : int\lday : DayType\lmonth : int\lcategory : Category\l|+ farthest() : Zone\l}"];
+  Zone [label="{«enumeration»\nZone|Inner\lMiddle\lOuter\lAirport\l}"];
+  DayType [label="{«enumeration»\nDayType|Weekday\lWeekend\l}"];
+  Gate -> FareCalculator [label=" uses", style=dashed, arrowhead=open];
+  Gate -> SmartCard [label=" updates", style=dashed, arrowhead=open];
+  SmartCard -> MonthlyPass [label=" 0..1", arrowhead=none, arrowtail=diamond, dir=back];
+  FareCalculator -> Journey [label=" reads", style=dashed, arrowhead=open];
+  MonthlyPass -> Journey [label=" checks", style=dashed, arrowhead=open];
+  Journey -> Zone [arrowhead=open];
+  Journey -> DayType [arrowhead=open];
+}

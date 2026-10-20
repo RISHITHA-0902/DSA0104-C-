@@ -1,0 +1,12 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task02_constants task02_constants.cpp
+task02_constants.cpp: In function 'int main()':
+task02_constants.cpp:40:27: warning: comparison between 'enum OldZone' and 'enum Colour' [-Wenum-compare]
+   40 |     bool strange = (OUTER == BLUE);       // compiles: compares two unrelated enums as ints
+      |                     ~~~~~~^~~~~~~
+$ ./task02_constants 
+Outer peak fare (constexpr, compile time): 3600 paise
+Plain enum OUTER as int = 2, OUTER == BLUE ? true
+enum class Zone::Outer needs static_cast: 2
+fareNow = 3600 paise
+sizeof(fare::BASE_PAISE) = 24 bytes
+[exit code 0]

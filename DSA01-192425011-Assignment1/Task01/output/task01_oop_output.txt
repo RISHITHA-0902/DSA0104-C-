@@ -1,0 +1,14 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task01_oop task01_oop.cpp
+$ ./task01_oop 
+Passenger: Rishitha (Student)
+Opening balance: Rs 150.00
+
+Journey         Fare (Rs)   Result    Balance (Rs)
+Inner 07:45     7.50        OK        142.50
+Outer 08:00     27.00       OK        115.50
+Middle 10:00    15.00       OK        100.50
+Outer 19:59     27.00       OK        73.50
+
+Negative recharge accepted? no
+Final balance: Rs 73.50
+[exit code 0]

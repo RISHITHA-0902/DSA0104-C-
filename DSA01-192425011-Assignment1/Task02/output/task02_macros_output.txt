@@ -1,0 +1,7 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task02_macros task02_macros.cpp
+$ ./task02_macros 
+Outer peak fare with macro  : 300000 paise (expected 3600)
+SQUARE(1 + 1) with macro    : 3 (expected 4)
+MIN_BALANCE has no name in the debugger, only the value 5000
+Correct value with brackets : 3600 paise
+[exit code 0]

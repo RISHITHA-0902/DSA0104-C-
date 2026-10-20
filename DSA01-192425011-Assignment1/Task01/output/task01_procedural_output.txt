@@ -1,0 +1,9 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task01_procedural task01_procedural.cpp
+$ ./task01_procedural 
+Procedural version, opening balance Rs 150
+zone 0  fare 7.50  OK  balance 142.50
+zone 2  fare 27.00  OK  balance 115.50
+zone 1  fare 15.00  OK  balance 100.50
+zone 2  fare 27.00  OK  balance 73.50
+After a stray 'g_balance -= 20000;' the balance is -126 rupees
+[exit code 0]

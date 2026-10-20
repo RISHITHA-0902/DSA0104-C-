@@ -1,0 +1,8 @@
+$ g++ -std=c++17 -Wall -Wextra -O2 -o task06_array_lookup task06_array_lookup.cpp
+$ ./task06_array_lookup 
+zone 0: switch 1000  array 1000
+zone 1: switch 2000  array 2000
+zone 2: switch 3000  array 3000
+100,000,000 lookups: switch 74.563 ms, array 71.1281 ms
+Array size: 24 bytes (3 zones)
+[exit code 0]

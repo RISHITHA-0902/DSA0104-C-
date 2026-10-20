@@ -1,0 +1,15 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task06_peak_boundary task06_peak_boundary.cpp
+$ ./task06_peak_boundary 
+Zone   Time   Peak  Fare(Rs)  Balance(Rs)
+Inner  07:59  no    10.00     490.00
+Inner  08:00  yes   12.00     478.00
+Middle 09:59  yes   24.00     454.00
+Middle 10:00  no    20.00     434.00
+Outer  16:59  no    30.00     404.00
+Outer  17:00  yes   36.00     368.00
+Outer  19:59  yes   36.00     332.00
+Outer  20:00  no    30.00     302.00
+skip   09:00  invalid journey ignored
+skip   25:00  invalid journey ignored
+10:00 peak? false   20:00 peak? false   (both correctly off-peak)
+[exit code 0]
