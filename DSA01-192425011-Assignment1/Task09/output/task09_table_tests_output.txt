@@ -1,0 +1,22 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task09_table_tests task09_table_tests.cpp
+$ ./task09_table_tests 
+F1   expected 10.00   actual 10.00   PASS
+F2   expected 12.00   actual 12.00   PASS
+F3   expected 20.00   actual 20.00   PASS
+F4   expected 24.00   actual 24.00   PASS
+F5   expected 30.00   actual 30.00   PASS
+F6   expected 36.00   actual 36.00   PASS
+F7   expected 27.00   actual 27.00   PASS
+F8   expected 21.60   actual 21.60   PASS
+F9   expected 10.00   actual 10.00   PASS
+F10  expected 12.00   actual 12.00   PASS
+F11  expected 12.00   actual 12.00   PASS
+F12  expected 10.00   actual 10.00   PASS
+F13  expected 12.00   actual 12.00   PASS
+F14  expected 12.00   actual 12.00   PASS
+F15  expected 10.00   actual 10.00   PASS
+F16  expected 22.50   actual 22.50   PASS
+F17  expected 12.00   actual 12.00   PASS
+17 table cases, 17 passed, 0 failed
+Table size: 544 bytes (32 bytes per case)
+[exit code 0]

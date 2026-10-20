@@ -1,0 +1,14 @@
+$ g++ -std=c++17 -Wall -Wextra -O2 -o task05_expressions task05_expressions.cpp
+task05_expressions.cpp: In function 'int main()':
+task05_expressions.cpp:29:42: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+   29 |         bool withoutBrackets = hour >= 8 && hour < 10 || hour >= 17 && hour < 20;  // -Wparentheses warns
+      |                                ~~~~~~~~~~^~~~~~~~~~~~
+$ ./task05_expressions 
+Hours where the three peak checks disagree: 0
+Boundary hours  8:1 9:1 10:0 17:1 19:1 20:0
+Outer, 18:00, student fare = 2700 paise (expected 2700)
+post-increment gave 5, pre-increment gave 7, x = 7
+-7 / 2 = -3, -7 % 2 = -1, 7 % -2 = 1
+100,000,000 checks: expression 90.1193 ms, table 70.1625 ms
+Extra space used by the table: 24 bytes
+[exit code 0]

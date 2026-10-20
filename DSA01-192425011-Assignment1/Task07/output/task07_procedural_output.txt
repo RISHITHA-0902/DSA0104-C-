@@ -1,0 +1,7 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task07_procedural task07_procedural.cpp
+$ ./task07_procedural 
+paid 3600, balance 6400
+denied 2000, balance 6400
+paid 1000, balance 5400
+after unchecked deduct(9000): balance -3600 paise  <-- rule broken
+[exit code 0]

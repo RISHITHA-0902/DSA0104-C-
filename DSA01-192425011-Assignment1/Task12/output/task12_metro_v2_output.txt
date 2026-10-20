@@ -1,0 +1,27 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task12_metro_v2 task12_metro_v2.cpp
+$ ./task12_metro_v2 
+ID   Test case                                         Expected  Actual    Result
+--------------------------------------------------------------------------------
+R1   Inner weekday off-peak                            10.00     10.00     PASS
+R2   Middle weekday peak 18:15                         24.00     24.00     PASS
+R3   Outer weekday peak 08:00                          36.00     36.00     PASS
+R4   Outer weekday 10:00 (off-peak)                    30.00     30.00     PASS
+R5   Outer weekday peak senior                         21.60     21.60     PASS
+A1   Airport weekday off-peak                          60.00     60.00     PASS
+A2   Airport weekday peak 17:00                        72.00     72.00     PASS
+A3   Airport weekday peak student                      54.00     54.00     PASS
+D1   Outer weekend off-peak (30 x 0.9)                 27.00     27.00     PASS
+D2   Airport weekend at 09:00 peak hour (60 x 0.9)     54.00     54.00     PASS
+D3   Outer weekend student (30 x 0.9 x 0.75)           20.25     20.25     PASS
+D4   Airport weekend senior (60 x 0.9 x 0.6)           32.40     32.40     PASS
+P1   Pass: Inner->Middle in October is free            0.00      0.00      PASS
+P2   Pass: balance unchanged after P1                  200.00    200.00    PASS
+P3   Pass: Middle->Outer is outside the pass           30.00     30.00     PASS
+P4   Pass: November journey, pass expired              10.00     10.00     PASS
+P5   Pass with two identical zones is invalid          invalid   invalid   PASS
+M1   Rs 110 - Airport Rs 60 leaves Rs 50: allowed      yes       yes       PASS
+M2   Rs 109.99 - Airport Rs 60: denied                 no        no        PASS
+--------------------------------------------------------------------------------
+Passed 19, failed 0
+Fare table: 32 bytes for 4 zones; sizeof(SmartCard) = 24 bytes
+[exit code 0]

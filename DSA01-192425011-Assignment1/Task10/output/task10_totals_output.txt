@@ -1,0 +1,27 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task10_totals task10_totals.cpp
+$ ./task10_totals 
+========== n = 20000 journeys ==========
+long long paise (exact) : Rs 391876.10
+double rupees           : Rs 391876.100000   difference 2.736e-09
+float rupees            : Rs 391875.12   difference -0.97
+int paise               : 39187610   no overflow
+journeys whose double fare truncates to a wrong paisa: 761
+
+========== n = 500000 journeys ==========
+long long paise (exact) : Rs 9797140.40
+double rupees           : Rs 9797140.400000   difference 5.029e-08
+float rupees            : Rs 9795510.00   difference -1630.40
+int paise               : 979714040   no overflow
+journeys whose double fare truncates to a wrong paisa: 19047
+
+========== n = 3000000 journeys ==========
+long long paise (exact) : Rs 58782863.40
+double rupees           : Rs 58782863.400056   difference 5.594e-05
+float rupees            : Rs 58338768.00   difference -444095.40
+int paise               : 1583319044   OVERFLOWED at journey 1095975
+journeys whose double fare truncates to a wrong paisa: 114284
+
+INT_MAX = 2147483647 paise = Rs 21474836
+50,000,000 additions: long long 26.794 ms, double 107.885 ms, int 28.157 ms
+sizes: int 4, long long 8, double 8, float 4 bytes
+[exit code 0]

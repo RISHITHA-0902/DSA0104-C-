@@ -1,0 +1,39 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task08_safe_io task08_safe_io.cpp
+$ ./task08_safe_io  < input_invalid.txt
+=== Namma Metro Gate ===
+Recharge amount in Rs: abc  -> not a number, try again
+Recharge amount in Rs: -100  -> out of range (1 to 10000), try again
+Recharge amount in Rs: 200
+Number of journeys: 3
+-- Journey 1 --
+Zone (1 Inner, 2 Middle, 3 Outer): x  -> not a number, try again
+Zone (1 Inner, 2 Middle, 3 Outer): 7  -> out of range (1 to 3), try again
+Zone (1 Inner, 2 Middle, 3 Outer): 3
+Hour (0-23): ten  -> not a number, try again
+Hour (0-23): 8
+Minute (0-59): 0
+Category (G/S/C): S
+-- Journey 2 --
+Zone (1 Inner, 2 Middle, 3 Outer): 2
+Hour (0-23): 9
+Minute (0-59): 75  -> out of range (0 to 59), try again
+Minute (0-59): 30
+Category (G/S/C): Q  -> use G (general), S (student) or C (senior citizen)
+Category (G/S/C): C
+-- Journey 3 --
+Zone (1 Inner, 2 Middle, 3 Outer): 1
+Hour (0-23): 20
+Minute (0-59): 0
+Category (G/S/C): G
+
+========================================================
+                  JOURNEY REPORT
+========================================================
+No  Zone    Time   Cat    Fare(Rs)   Status  Balance(Rs)
+--------------------------------------------------------
+1   Outer   08:00  S         27.00       OK       173.00
+2   Middle  09:30  C         14.40       OK       158.60
+3   Inner   20:00  G         10.00       OK       148.60
+--------------------------------------------------------
+Total paid: Rs 51.40   Average fare: Rs 17.13
+[exit code 0]

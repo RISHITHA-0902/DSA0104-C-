@@ -1,0 +1,8 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task05_predict task05_predict.cpp
+$ ./task05_predict 
+11 16
+9 6 4
+6 4
+3 1 -3 -1
+18
+[exit code 0]

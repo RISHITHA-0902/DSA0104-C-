@@ -1,0 +1,37 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task09_tests task09_tests.cpp
+$ ./task09_tests 
+ID   Test case                                     Expected    Actual      Result
+--------------------------------------------------------------------------------
+N1   Inner  off-peak 12:00                         10.00       10.00       PASS
+N2   Inner  peak     09:00                         12.00       12.00       PASS
+N3   Middle off-peak 14:30                         20.00       20.00       PASS
+N4   Middle peak     18:15                         24.00       24.00       PASS
+N5   Outer  off-peak 22:00                         30.00       30.00       PASS
+N6   Outer  peak     08:30                         36.00       36.00       PASS
+N7   Outer  peak student (36 x 0.75)               27.00       27.00       PASS
+N8   Outer  peak senior  (36 x 0.60)               21.60       21.60       PASS
+B1   07:59 is off-peak                             no          no          PASS
+B2   08:00 is peak                                 yes         yes         PASS
+B3   09:59 is peak                                 yes         yes         PASS
+B4   10:00 is off-peak                             no          no          PASS
+B5   17:00 is peak                                 yes         yes         PASS
+B6   19:59 is peak                                 yes         yes         PASS
+B7   20:00 is off-peak                             no          no          PASS
+B8   Rs 80 - Rs 30 leaves exactly Rs 50: allowed?  yes         yes         PASS
+B9   Balance after B8                              50.00       50.00       PASS
+B10  Rs 79.99 - Rs 30 leaves Rs 49.99: allowed?    no          no          PASS
+B11  Balance unchanged after denial                79.99       79.99       PASS
+I1   Unknown zone number 4 rejected                rejected    rejected    PASS
+I2   Zone number 0 rejected                        rejected    rejected    PASS
+I3   Negative recharge -500 rejected               rejected    rejected    PASS
+I4   Balance unchanged after I3                    100.00      100.00      PASS
+I5   Negative fare cannot be deducted              rejected    rejected    PASS
+I6   Hour typed as "ab" rejected                   rejected    rejected    PASS
+I7   Hour typed as "9x" rejected                   rejected    rejected    PASS
+I8   Hour typed as "24" rejected                   rejected    rejected    PASS
+I9   Hour typed as "17" accepted                   17          17          PASS
+T1   Total of 5 journeys (hand: 90.10)             90.10       90.10       PASS
+T2   Balance after 5 journeys (hand: 109.90)       109.90      109.90      PASS
+--------------------------------------------------------------------------------
+Passed 30, failed 0
+[exit code 0]

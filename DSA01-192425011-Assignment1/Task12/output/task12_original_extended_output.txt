@@ -1,0 +1,9 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task12_original_extended task12_original_extended.cpp
+task12_original_extended.cpp: In function 'long long int fare(Zone, bool)':
+task12_original_extended.cpp:13:12: warning: enumeration value 'Airport' not handled in switch [-Wswitch]
+   13 |     switch (z) {                                              // -Wswitch: 'Airport' not handled
+      |            ^
+$ ./task12_original_extended 
+Airport off-peak fare from the old switch: 0 paise (should be 6000)
+Outer peak (weekday) still correct: 3600 paise
+[exit code 0]

@@ -1,0 +1,14 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task08_getline task08_getline.cpp
+$ ./task08_getline  < input_invalid.txt
+line 1 "abc" rejected for Recharge (Rs): not a number
+line 2 "-100" rejected for Recharge (Rs): out of range
+Recharge (Rs) = 200  (line 3)
+Journeys = 3  (line 4)
+line 5 "x" rejected for Zone: not a number
+line 6 "7" rejected for Zone: out of range
+Zone = 3  (line 7)
+line 8 "ten" rejected for Hour: not a number
+Hour = 8  (line 9)
+"99999999999" rejected: too large for int
+"12abc" rejected: extra characters  (cin >> would silently read 12)
+[exit code 0]

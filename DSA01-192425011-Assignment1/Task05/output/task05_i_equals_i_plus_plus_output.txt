@@ -1,0 +1,10 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task05_i_equals_i_plus_plus task05_i_equals_i_plus_plus.cpp
+task05_i_equals_i_plus_plus.cpp: In function 'int main()':
+task05_i_equals_i_plus_plus.cpp:7:7: warning: operation on 'i' may be undefined [-Wsequence-point]
+    7 |     i = i++;   // before C++17: undefined behaviour; C++17: the increment is lost, i stays 5
+      |     ~~^~~~~
+task05_i_equals_i_plus_plus.cpp:7:7: warning: operation on 'i' may be undefined [-Wsequence-point]
+$ ./task05_i_equals_i_plus_plus 
+After i = i++ : i = 5 (the ++ had no lasting effect)
+After ++j     : j = 6
+[exit code 0]

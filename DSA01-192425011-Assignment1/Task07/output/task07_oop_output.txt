@@ -1,0 +1,10 @@
+$ g++ -std=c++17 -Wall -Wextra  -o task07_oop task07_oop.cpp
+$ ./task07_oop 
+paid 3600, balance 6400
+denied 2000, balance 6400
+paid 1000, balance 5400
+deduct(9000) allowed? no, balance 5400
+deduct(-500) allowed? no
+recharge(-2000) allowed? no
+Balance can never go below 5000 paise through this class.
+[exit code 0]
