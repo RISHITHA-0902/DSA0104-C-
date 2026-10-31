@@ -1,7 +1,0 @@
-Q2/q2_dangling.cpp: In function 'int& badHighest(int, int)':
-Q2/q2_dangling.cpp:17:12: warning: reference to local variable 'top' returned [-Wreturn-local-addr]
-   17 |     return top;                  // <-- BUG: returns reference to a dead local
-      |            ^~~
-Q2/q2_dangling.cpp:16:9: note: declared here
-   16 |     int top = (a > b) ? a : b;   // 'top' is local to this function
-      |         ^~~
