@@ -1,0 +1,5 @@
+=== Q7: shift array vs circular buffer, 1,000,000 adds, -O2 ===
+ORIGINAL (shift array): 1000000 adds in 117.93 ms
+  oldest kept = 997953, newest = 1000000
+REDESIGN (circular buf): 1000000 adds in 2.15302 ms
+  oldest kept = 997953, newest = 1000000

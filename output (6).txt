@@ -1,0 +1,12 @@
+$ ./q6_time
+205 false
+across noon: 2 true
+same twice : 0 false
+
+=== timing: 10,000,000 calls (representative) ===
+[-O0]
+noinline 10000000 calls: 52.0978 ms  (sink=3639833138)
+inline   10000000 calls: 56.5355 ms  (sink=3639833138)
+[-O2]
+noinline 10000000 calls: 26.4129 ms  (sink=3639833138)
+inline   10000000 calls: 17.7228 ms  (sink=3639833138)

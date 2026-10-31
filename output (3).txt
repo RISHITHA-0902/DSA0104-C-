@@ -1,0 +1,13 @@
+$ ./q4_savings
+Mini-statement for A/C 192425011  (last 10 of max 10)
+  CR 300
+  CR 400
+  CR 500
+  CR 600
+  CR 700
+  DR 250
+  DR 400
+  CR 50
+  CR 60
+  CR 70
+  Balance: 3330
