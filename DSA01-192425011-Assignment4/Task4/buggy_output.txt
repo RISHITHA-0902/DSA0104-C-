@@ -1,0 +1,34 @@
+$ g++ -std=c++17 -Wall -Wextra -g -fsanitize=address buggy.cpp -o buggy
+$ ./buggy
+=================================================================
+==646==ERROR: AddressSanitizer: new-delete-type-mismatch on 0x502000000030 in thread T0:
+  object passed to delete has wrong type:
+  size of the allocated type:   8 bytes;
+  size of the deallocated type: 1 bytes.
+    #0 0x7f690c0ff5e8 in operator delete(void*, unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:164
+    #1 0x555711bc75b2 in main Task4/buggy.cpp:10
+    #2 0x7f690b82a1c9 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #3 0x7f690b82a28a in __libc_start_main_impl ../csu/libc-start.c:360
+    #4 0x555711bc7284 in _start (/tmp/buggy+0x1284) (BuildId: 8ce7de7237a529ead844fe3897a57bec915d6af1)
+
+0x502000000030 is located 0 bytes inside of 8-byte region [0x502000000030,0x502000000038)
+allocated by thread T0 here:
+    #0 0x7f690c0fe548 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x555711bc7439 in main Task4/buggy.cpp:8
+    #2 0x7f690b82a1c9 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #3 0x7f690b82a28a in __libc_start_main_impl ../csu/libc-start.c:360
+    #4 0x555711bc7284 in _start (/tmp/buggy+0x1284) (BuildId: 8ce7de7237a529ead844fe3897a57bec915d6af1)
+
+SUMMARY: AddressSanitizer: new-delete-type-mismatch ../../../../src/libsanitizer/asan/asan_new_delete.cpp:164 in operator delete(void*, unsigned long)
+==646==HINT: if you don't care about these errors you may set ASAN_OPTIONS=new_delete_type_mismatch=0
+==646==ABORTING
+
+$ g++ -std=c++17 -Wall -Wextra buggy.cpp -o buggy && ./buggy   (without sanitizer)
+3.5
+3.5
+~Account
+~Account
+~SeniorAccount
+~Account
+copy rate: 3.5
+~Account

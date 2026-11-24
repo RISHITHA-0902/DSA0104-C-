@@ -1,0 +1,5 @@
+$ g++ -std=c++17 -Wall -Wextra -g -fsanitize=address main.cpp -o main
+$ ./main
+Anu total 200 (this == &a: true)
+Hari total 425
+Highest cart: C2 = 600

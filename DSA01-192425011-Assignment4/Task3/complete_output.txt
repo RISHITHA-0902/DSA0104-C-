@@ -1,0 +1,3 @@
+$ g++ -std=c++17 -Wall -Wextra complete.cpp -o complete
+$ ./complete
+192311001 Kavya (19) Salem-636001

@@ -1,0 +1,3 @@
+$ g++ -std=c++17 -Wall -Wextra predict.cpp -o predict
+$ ./predict
+3.5 4 3.5

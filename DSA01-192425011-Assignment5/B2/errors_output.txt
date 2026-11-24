@@ -1,0 +1,29 @@
+$ g++ -std=c++17 -Wall -Wextra errors.cpp -o errors && ./errors
+1. negative charges
+  +bill-guard
+  -bill-guard
+  BillingError: negative consultation
+2. claim above cover
+  +claim-guard
+  -claim-guard
+  ClaimError: claim 126000 exceeds cover 50000
+3. unknown package
+  ClaimError: unknown package 'LASIK'
+4. missing patient record
+  BillingError: missing patient record
+5. text where a number is expected
+  +parser
+  -parser
+  invalid_argument: stod
+6. memory allocation failure
+  +buffer-owner
+  -buffer-owner
+  bad_alloc: std::bad_alloc
+7. non-standard exception (catch(...))
+  +legacy
+  -legacy
+  unknown error - program continues
+8. valid bill
+  total 1700
+  ok
+program still running after all errors

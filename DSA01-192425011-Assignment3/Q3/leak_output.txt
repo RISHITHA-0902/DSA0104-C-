@@ -1,0 +1,3 @@
+$ g++ -std=c++17 -Wall -Wextra -g -fsanitize=address leak.cpp -o leak
+$ ./leak
+forgot delete

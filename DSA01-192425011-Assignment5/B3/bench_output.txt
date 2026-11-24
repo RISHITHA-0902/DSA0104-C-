@@ -1,0 +1,10 @@
+$ g++ -std=c++17 -Wall -Wextra -O2 bench.cpp -o bench
+$ ./bench
+10 bills: virtual=1.6149e+06 switch=1.6149e+06 variant=1.6149e+06  AGREE
+1000 bills: virtual 0.008903 ms | switch 0.006571 ms | variant 0.006363 ms
+1000000 bills: virtual 11.911 ms | switch 8.3554 ms | variant 8.5742 ms
+10000000 bills: virtual 134.845 ms | switch 102.944 ms | variant 97.46 ms
+sizeof: SBill=32 VarBill=32 VOP(+vptr)=24 VIP=32
+0% invalid: exceptions 0.581674 ms | return codes 0.342098 ms | optional 0.243029 ms  (rejected 0/0/0)
+1% invalid: exceptions 10.5641 ms | return codes 0.269344 ms | optional 0.288315 ms  (rejected 9876/9876/9876)
+50% invalid: exceptions 504.347 ms | return codes 0.94217 ms | optional 0.874297 ms  (rejected 499621/499621/499621)

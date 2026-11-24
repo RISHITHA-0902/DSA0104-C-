@@ -1,0 +1,12 @@
+$ g++ -std=c++17 -Wall -Wextra main.cpp -o main
+$ ./main
+w = 314.159 rad/s
+ZR = 100.000 + j0.000
+ZL = 0.000 + j157.080
+ZC = 0.000 - j159.155
+Series   Z = 100.000 - j2.075  |Z| = 100.022 ohm
+Parallel Z = 99.993 + j0.830  |Z| = 99.997 ohm
+std::complex check: series (100.000,-2.075) parallel (99.993,0.830)
+(1+2j)*(3-4j) = 11.000 + j2.000  equal to 11+2j? true
+Error: division by zero impedance
+std::complex 5/0 = (inf,inf)  (no error, NaN/inf)

@@ -1,0 +1,10 @@
+$ g++ -std=c++17 -Wall -Wextra -g -fsanitize=address fixed.cpp -o fixed
+$ ./fixed
+3.5
+4
+via reference: 4
+~SeniorAccount
+~Account
+~Account
+~SeniorAccount
+~Account

@@ -1,0 +1,22 @@
+$ g++ -std=c++17 -Wall -Wextra -g -fsanitize=address main.cpp -o main
+$ ./main
+CTOR StackShow (3x5, 39 bytes)
+  .....
+  ..X..
+  ....X
+CTOR BlockShow (2x3, 22 bytes)
+leaving block
+DTOR BlockShow: 1/6 seats booked, memory released
+CTOR HeapShow (4x4, 48 bytes)
+DTOR HeapShow: 1/16 seats booked, memory released
+CTOR ZeroRows (0x10, 0 bytes)
+book on zero rows: false
+CTOR Size (10x20, 280 bytes)
+DTOR Size: 0/200 seats booked, memory released
+CTOR Size (100x200, 20800 bytes)
+DTOR Size: 0/20000 seats booked, memory released
+CTOR Size (1000x2000, 2008000 bytes)
+DTOR Size: 0/2000000 seats booked, memory released
+end of main
+DTOR ZeroRows: 0/0 seats booked, memory released
+DTOR StackShow: 2/15 seats booked, memory released

@@ -1,0 +1,26 @@
+$ g++ -std=c++17 -Wall -Wextra -g -fsanitize=address main.cpp -o main
+$ ./main
+Fleet:
+  Bicycle             BC-01  available
+  TwoWheeler          TN01-TW-11  available
+  Car                 TN09-CR-22  available
+  ElectricCar(40kWh)  TN10-EV-33  available
+  ElectricBus         TN11-EB-44  available
+After renting all:
+  Bicycle             BC-01  RENTED
+  TwoWheeler          TN01-TW-11  RENTED
+  Car                 TN09-CR-22  RENTED
+  ElectricCar(40kWh)  TN10-EV-33  RENTED
+  ElectricBus         TN11-EB-44  RENTED
+Error: BC-01 already rented
+Return BC-01 3 days            : 300.00
+Return TN01-TW-11 2 days       : 1010.00
+Return TN09-CR-22 2 days +1 late: 7020.00
+Return TN10-EV-33 1 day        : 2860.00
+Return TN11-EB-44 1 day +2 late: 26200.00
+Final:
+  Bicycle             BC-01  available
+  TwoWheeler          TN01-TW-11  available
+  Car                 TN09-CR-22  available
+  ElectricCar(40kWh)  TN10-EV-33  available
+  ElectricBus         TN11-EB-44  available

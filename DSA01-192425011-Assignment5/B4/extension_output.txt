@@ -1,0 +1,9 @@
+$ g++ -std=c++17 -Wall -Wextra -g -fsanitize=address extension.cpp -o extension
+$ ./extension
+PASS OP Ravi total 1700 | SelfPay=0 Insurance=1530 GovtScheme=1000 Corporate=1360
+PASS IP Meena total 53500 | SelfPay=0 Insurance=48150 GovtScheme=50000 Corporate=25000
+PASS DC Arjun total 18000 | SelfPay=0 Insurance=16200 GovtScheme=15000 Corporate=14400
+PASS ER Lakshmi total 9000 | SelfPay=0 Insurance=8100 GovtScheme=8000 Corporate=7200
+PASS DL Kannan total 17600 | SelfPay=0 Insurance=15840 GovtScheme=REJECTED(unknown package 'DIALYSIS') Corporate=14080
+5/5 totals correct
+caught: negative sessions

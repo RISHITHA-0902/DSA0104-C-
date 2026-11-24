@@ -1,0 +1,8 @@
+$ g++ -std=c++17 -Wall -Wextra billing.cpp -o billing
+$ ./billing
+Bill      Total    SelfPay covers/pays     Insurance covers/pays   GovtScheme covers/pays  
+OP Ravi   1700     0 / 1700                1530 / 170              1000 / 700              
+IP Meena  53500    0 / 53500               48150 / 5350            50000 / 3500            
+DC Arjun  18000    0 / 18000               16200 / 1800            15000 / 3000            
+ER Lakshm 9000     0 / 9000                8100 / 900              8000 / 1000             
+Day total: 82200

@@ -1,0 +1,3 @@
+$ g++ -std=c++17 -Wall -Wextra predict_novirtual.cpp -o predict_novirtual
+$ ./predict_novirtual
+Person Student Person Staff TA 

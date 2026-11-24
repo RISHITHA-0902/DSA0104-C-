@@ -1,0 +1,16 @@
+$ g++ -std=c++17 -Wall -Wextra no_default.cpp -o no_default
+Q1/no_default.cpp: In function 'int main()':
+Q1/no_default.cpp:4:26: error: no matching function for call to 'Book::Book()'
+    4 | int main() { Book shelf[3]; (void)shelf; }
+      |                          ^
+Q1/no_default.cpp:3:37: note: candidate: 'Book::Book(const std::string&, int)'
+    3 | struct Book { std::string t; int c; Book(const std::string& s, int n) : t(s), c(n) {} };
+      |                                     ^~~~
+Q1/no_default.cpp:3:37: note:   candidate expects 2 arguments, 0 provided
+Q1/no_default.cpp:3:8: note: candidate: 'Book::Book(const Book&)'
+    3 | struct Book { std::string t; int c; Book(const std::string& s, int n) : t(s), c(n) {} };
+      |        ^~~~
+Q1/no_default.cpp:3:8: note:   candidate expects 1 argument, 0 provided
+Q1/no_default.cpp:3:8: note: candidate: 'Book::Book(Book&&)'
+Q1/no_default.cpp:3:8: note:   candidate expects 1 argument, 0 provided
+[compilation failed]

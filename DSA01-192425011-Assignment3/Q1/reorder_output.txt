@@ -1,0 +1,20 @@
+$ g++ -std=c++17 -Wall -Wextra reorder.cpp -o reorder
+Q1/reorder.cpp: In constructor 'Book::Book(int)':
+Q1/reorder.cpp:5:9: warning: 'Book::reserved' will be initialized after [-Wreorder]
+    5 |     int reserved;
+      |         ^~~~~~~~
+Q1/reorder.cpp:4:9: warning:   'int Book::copies' [-Wreorder]
+    4 |     int copies;     // declared first -> initialised first
+      |         ^~~~~~
+Q1/reorder.cpp:6:5: warning:   when initialized here [-Wreorder]
+    6 |     Book(int r) : reserved(r), copies(reserved * 2) {}   // copies reads garbage
+      |     ^~~~
+Q1/reorder.cpp:6:39: warning: member 'Book::reserved' is used uninitialized [-Wuninitialized]
+    6 |     Book(int r) : reserved(r), copies(reserved * 2) {}   // copies reads garbage
+      |                                       ^~~~~~~~
+Q1/reorder.cpp: In constructor 'Book::Book(int)':
+Q1/reorder.cpp:6:39: warning: '*this.Book::reserved' is used uninitialized [-Wuninitialized]
+    6 |     Book(int r) : reserved(r), copies(reserved * 2) {}   // copies reads garbage
+      |                                       ^~~~~~~~
+$ ./reorder
+copies=0 reserved=4

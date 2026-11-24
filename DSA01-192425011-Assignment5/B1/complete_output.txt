@@ -1,0 +1,5 @@
+$ g++ -std=c++17 -Wall -Wextra -g -fsanitize=address complete.cpp -o complete
+$ ./complete
+OP Ravi: 1700
+IP Meena: 47500
+Total 49200

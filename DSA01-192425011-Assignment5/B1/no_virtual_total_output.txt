@@ -1,0 +1,5 @@
+$ g++ -std=c++17 -Wall -Wextra no_virtual_total.cpp -o no_virtual_total
+$ ./no_virtual_total
+0
+0
+Total 0  (expected 49200)

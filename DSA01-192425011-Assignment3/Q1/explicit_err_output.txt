@@ -1,0 +1,9 @@
+$ g++ -std=c++17 -Wall -Wextra explicit_err.cpp -o explicit_err
+Q1/explicit_err.cpp: In function 'int main()':
+Q1/explicit_err.cpp:5:26: error: invalid initialization of reference of type 'const Book&' from expression of type 'std::string' {aka 'std::__cxx11::basic_string<char>'}
+    5 | int main() { shelve(std::string("Gift")); }
+      |                          ^~~~~~~~~~~~~~
+Q1/explicit_err.cpp:4:13: note: in passing argument 1 of 'void shelve(const Book&)'
+    4 | void shelve(const Book&) {}
+      |             ^~~~~~~~~~~
+[compilation failed]

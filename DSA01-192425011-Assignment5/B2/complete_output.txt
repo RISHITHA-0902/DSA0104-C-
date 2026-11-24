@@ -1,0 +1,6 @@
+$ g++ -std=c++17 -Wall -Wextra complete.cpp -o complete
+$ ./complete
+approved 40000
+audit: exceeds cover
+claim rejected: exceeds cover
+error: negative amount

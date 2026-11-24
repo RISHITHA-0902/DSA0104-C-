@@ -1,0 +1,3 @@
+$ g++ -std=c++17 -Wall -Wextra -g -fsanitize=address main.cpp -o main
+$ ./main
+Ibuprofen ORS | Paracetamol Cetirizine | Paracetamol ORS

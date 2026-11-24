@@ -1,0 +1,5 @@
+$ g++ -std=c++17 -Wall -Wextra main.cpp -o main
+$ ./main
+TA name (one Person, no ambiguity): Priya
+Composed TA name (chosen copy)     : Priya
+sizeof(Person)=80 sizeof(TeachingAssistant, virtual)=176 sizeof(TA_Composed)=256 sizeof(ResearchScholar)=168

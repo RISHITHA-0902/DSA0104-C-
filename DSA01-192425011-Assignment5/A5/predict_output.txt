@@ -1,0 +1,3 @@
+$ g++ -std=c++17 -Wall -Wextra predict.cpp -o predict
+$ ./predict
+~f ~main caught 42

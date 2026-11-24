@@ -1,0 +1,9 @@
+$ g++ -std=c++17 -Wall -Wextra experiment.cpp -o experiment
+$ ./experiment
+copies when passed by value     : 1
+copies when passed by const ref : 0
+self-assignment ignored
+after p = p, p[0] = ORS
+copy of 10 medicines: 0.392 us
+copy of 1000 medicines: 26.39 us
+copy of 100000 medicines: 2205.82 us

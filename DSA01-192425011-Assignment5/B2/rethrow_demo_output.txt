@@ -1,0 +1,8 @@
+$ g++ -std=c++17 -Wall -Wextra rethrow_demo.cpp -o rethrow_demo
+$ ./rethrow_demo
+throw; 
+audit: exceeds cover
+  -> caught as CoverExceeded (original object)
+throw e;
+audit: exceeds cover
+  -> caught only as ClaimError (sliced copy)

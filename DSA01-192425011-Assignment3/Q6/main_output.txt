@@ -1,0 +1,7 @@
+$ g++ -std=c++17 -Wall -Wextra -g -fsanitize=address main.cpp -o main
+$ ./main
+Your OTP is 4821  | copies for a+b+c: 2
+empty == empty: true, msg != e: true
+after self-assign: Your OTP is 4821
+long message length: 500
+100000 concatenations: Text 3094.27 ms, std::string 1.67468 ms

@@ -1,0 +1,16 @@
+$ g++ -std=c++17 -Wall -Wextra main.cpp -o main
+$ ./main
+a = 0:10  b = 0:12  t = 0:12
+59:59 + 1s -> 1:00:00
+a < b: true  b == t: true
+Playing Intro from 0:00 to 0:03
+Playing Melody (remix) from 0:03 to 0:06
+Playing Finale from 0:06 to 0:09
+Error: track index -1 out of range
+Error: track index 3 out of range
+prefix  : 18.8503 ms (2777:46:40)
+postfix : 42.8574 ms (2777:46:40)
+
+$ g++ -std=c++17 -O2 main.cpp -o main_O2 && ./main_O2   (timing lines)
+prefix  : 5.09328 ms (2777:46:40)
+postfix : 8.25774 ms (2777:46:40)

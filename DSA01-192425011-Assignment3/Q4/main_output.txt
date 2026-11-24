@@ -1,0 +1,8 @@
+$ g++ -std=c++17 -Wall -Wextra main.cpp -o main
+$ ./main
+0.75 + 0.50 = Rs 1.25
+50 - 80 = -Rs 30.00  (negative -> shown as amount due)
+100 + m = Rs 102.50   m + 100 = Rs 102.50
+Bill Rs 420.75, payable Rs 400.75, over 300? true
+read: Rs 45.90
+double: 100000.00000133288   Money: Rs 100000.00

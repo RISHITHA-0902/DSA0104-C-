@@ -1,0 +1,3 @@
+$ g++ -std=c++17 -Wall -Wextra complete.cpp -o complete
+$ ./complete
+324.00

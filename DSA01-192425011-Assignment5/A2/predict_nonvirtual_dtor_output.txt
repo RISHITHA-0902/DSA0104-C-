@@ -1,0 +1,28 @@
+$ g++ -std=c++17 -Wall -Wextra -g -fsanitize=address predict_nonvirtual_dtor.cpp -o predict_nonvirtual_dtor
+A2/predict_nonvirtual_dtor.cpp: In function 'int main()':
+A2/predict_nonvirtual_dtor.cpp:18:5: warning: deleting object of abstract class type 'Bill' which has non-virtual destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]
+   18 |     delete b;
+      |     ^~~~~~~~
+$ ./predict_nonvirtual_dtor
+=================================================================
+==1144==ERROR: AddressSanitizer: new-delete-type-mismatch on 0x504000000010 in thread T0:
+  object passed to delete has wrong type:
+  size of the allocated type:   40 bytes;
+  size of the deallocated type: 8 bytes.
+    #0 0x7fe1a84ff5e8 in operator delete(void*, unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:164
+    #1 0x55c273feb522 in main A2/predict_nonvirtual_dtor.cpp:18
+    #2 0x7fe1a7c2a1c9 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #3 0x7fe1a7c2a28a in __libc_start_main_impl ../csu/libc-start.c:360
+    #4 0x55c273feb404 in _start (/tmp/predict_nonvirtual_dtor+0x2404) (BuildId: 8bd5d1ec8cc70a117366c7900abd65bc2850a321)
+
+0x504000000010 is located 0 bytes inside of 40-byte region [0x504000000010,0x504000000038)
+allocated by thread T0 here:
+    #0 0x7fe1a84fe548 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x55c273feb4e3 in main A2/predict_nonvirtual_dtor.cpp:16
+    #2 0x7fe1a7c2a1c9 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #3 0x7fe1a7c2a28a in __libc_start_main_impl ../csu/libc-start.c:360
+    #4 0x55c273feb404 in _start (/tmp/predict_nonvirtual_dtor+0x2404) (BuildId: 8bd5d1ec8cc70a117366c7900abd65bc2850a321)
+
+SUMMARY: AddressSanitizer: new-delete-type-mismatch ../../../../src/libsanitizer/asan/asan_new_delete.cpp:164 in operator delete(void*, unsigned long)
+==1144==HINT: if you don't care about these errors you may set ASAN_OPTIONS=new_delete_type_mismatch=0
+==1144==ABORTING

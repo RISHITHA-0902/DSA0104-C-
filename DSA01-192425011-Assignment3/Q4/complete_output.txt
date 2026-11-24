@@ -1,0 +1,5 @@
+$ g++ -std=c++17 -Wall -Wextra complete.cpp -o complete
+$ ./complete
+Rs 200.00
+true
+carry test: Rs 1.25

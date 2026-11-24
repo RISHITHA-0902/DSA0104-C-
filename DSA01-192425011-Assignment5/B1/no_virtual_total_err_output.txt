@@ -1,0 +1,5 @@
+$ g++ -std=c++17 -Wall -Wextra no_virtual_total_err.cpp -o no_virtual_total_err
+B1/no_virtual_total_err.cpp:3:29: error: initializer specified for non-virtual method 'double Bill::total() const'
+    3 | class Bill { public: double total() const = 0; };
+      |                             ^~~~~
+[compilation failed]
